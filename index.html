@@ -54,63 +54,106 @@
         </a>
       </div>
     </div>
-
-    <!-- Quick Module Navigation Strip -->
-    <nav class="bg-slate-50 border-t border-slate-200 overflow-x-auto text-xs py-2 px-4 sm:px-8 flex items-center gap-4 text-slate-600 font-medium whitespace-nowrap">
-      <span class="text-slate-400 font-bold uppercase tracking-wider text-[10px]">Spis Treści:</span>
-      <a href="#module1" class="hover:text-blue-600 transition-colors">1. Intuicja Geometryczna</a>
-      <a href="#module2" class="hover:text-blue-600 transition-colors">2. Formalny Dowód & WCSS</a>
-      <a href="#module3" class="hover:text-blue-600 transition-colors">3. Symulator Lloyda 2D</a>
-      <a href="#module4" class="hover:text-blue-600 transition-colors">4. Diagnostyka (Łokieć & Sylwetka)</a>
-      <a href="#module5" class="hover:text-blue-600 transition-colors">5. Quiz Sprawdzający</a>
-      <a href="#module6" class="hover:text-blue-600 transition-colors">6. Produkcyjny Python</a>
-      <a href="#module7" class="hover:text-blue-600 transition-colors">7. Źródła & Bibliografia</a>
-    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
-    <div class="saas-card p-6 sm:p-8 bg-gradient-to-br from-white via-white to-blue-50/40 border-slate-200">
-      <div class="max-w-3xl">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-100/70 text-blue-800 mb-3">
-          🎓 Standard Lyceum: Geometria • Algorytm Lloyda • Wyprowadzenie Analityczne • Dotykowy Sandbox
-        </span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          Od Surowych Punktów do Optymalnych Skupień
-        </h2>
-        <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-          <strong>Algorytm k-means (k-średnich)</strong> to fundamentalny algorytm uczenia nienadzorowanego, którego celem jest podział zbioru \(N\) obserwacji w przestrzeni \(d\)-wymiarowej na \(k\) rozłącznych skupień. Działa na zasadzie ciągłego przemieszczania tzw. <strong>centroidów (środków ciężkości)</strong>, dążąc do minimalizacji sumy kwadratów odległości wewnątrz każdego klastra (WCSS).
-        </p>
-      </div>
+  <!-- ========================================================================= -->
+  <!-- UKŁAD DWUKOLUMNOWY (LEWY STICKY SIDEBAR + GŁÓWNA TREŚĆ)                  -->
+  <!-- ========================================================================= -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex gap-8">
 
-      <!-- Quick Metrics Ribbon -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6 pt-6 border-t border-slate-200/80">
-        <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Funkcja Kosztu</div>
-          <div class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">Min. WCSS (Inertia)</div>
-          <div class="text-[11px] text-slate-500 mt-0.5">\(\sum_{j} \sum_{i} \|x_i - \mu_j\|^2\)</div>
+    <!-- NAWIGACJA BOCZNA (TOC) -->
+    <aside class="hidden lg:block w-72 shrink-0">
+      <div class="sticky top-20 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
+          Nawigacja Traktatu
         </div>
-        <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Gwarancja Zbieżności</div>
-          <div class="text-base sm:text-lg font-bold text-emerald-600 mt-0.5">Minimum Lokalne</div>
-          <div class="text-[11px] text-slate-500 mt-0.5">Monotoniczny spadek kosztu</div>
-        </div>
-        <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Złożoność Czasowa</div>
-          <div class="text-base sm:text-lg font-bold text-blue-600 mt-0.5">\(\mathcal{O}(I \cdot k \cdot N \cdot d)\)</div>
-          <div class="text-[11px] text-slate-500 mt-0.5">Liniowa względem liczby danych</div>
-        </div>
-        <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
-          <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Inicjalizacja Standard</div>
-          <div class="text-base sm:text-lg font-bold text-amber-600 mt-0.5">k-means++</div>
-          <div class="text-[11px] text-slate-500 mt-0.5">Probabilistyczny rozrzut \(D(x)^2\)</div>
+
+        <nav class="space-y-1 text-xs">
+          <a href="#module1" class="nav-link active">
+            <span class="font-mono text-slate-400 mr-1.5">01.</span> Intuicja Geometryczna
+          </a>
+          <a href="#module2" class="nav-link">
+            <span class="font-mono text-slate-400 mr-1.5">02.</span> Dowód WCSS & Zbieżność
+          </a>
+          <a href="#module3" class="nav-link">
+            <span class="font-mono text-slate-400 mr-1.5">03.</span> Symulator Lloyda 2D
+          </a>
+          <a href="#module4" class="nav-link">
+            <span class="font-mono text-slate-400 mr-1.5">04.</span> Diagnostyka Łokcia & Sylwetki
+          </a>
+          <a href="#module5" class="nav-link">
+            <span class="font-mono text-slate-400 mr-1.5">05.</span> Quiz Sprawdzający
+          </a>
+          <a href="#module6" class="nav-link">
+            <span class="font-mono text-slate-400 mr-1.5">06.</span> Produkcyjny Python
+          </a>
+          <a href="#module7" class="nav-link">
+            <span class="font-mono text-slate-400 mr-1.5">07.</span> Źródła & Bibliografia
+          </a>
+        </nav>
+
+        <div class="pt-4 border-t border-slate-100">
+          <div class="text-xs text-slate-500 font-mono mb-2">Metryki k-means</div>
+          <div class="bg-slate-50 rounded-xl p-3 border border-slate-200/80 space-y-1.5 text-[11px] font-mono">
+            <div class="flex justify-between">
+              <span class="text-slate-500">Optymalizacja:</span>
+              <span class="text-blue-600 font-bold">Min WCSS</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Algorytm:</span>
+              <span class="text-slate-700 font-bold">Lloyd (EM)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Inicjalizacja:</span>
+              <span class="text-emerald-600 font-bold">k-means++</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- Main Content Container -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 pb-24">
+    <!-- GŁÓWNA PRZESTRZEŃ DYDAKTYCZNA -->
+    <main class="flex-1 space-y-8 sm:space-y-12 min-w-0">
+
+      <!-- Hero Section -->
+      <section class="saas-card p-6 sm:p-8 bg-gradient-to-br from-white via-white to-blue-50/40 border-slate-200">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-100/70 text-blue-800 mb-3">
+            🎓 Standard Lyceum: Geometria • Algorytm Lloyda • Wyprowadzenie Analityczne • Dotykowy Sandbox
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Od Surowych Punktów do Optymalnych Skupień
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            <strong>Algorytm k-means (k-średnich)</strong> to fundamentalny algorytm uczenia nienadzorowanego, którego celem jest podział zbioru \(N\) obserwacji w przestrzeni \(d\)-wymiarowej na \(k\) rozłącznych skupień. Działa na zasadzie ciągłego przemieszczania tzw. <strong>centroidów (środków ciężkości)</strong>, dążąc do minimalizacji sumy kwadratów odległości wewnątrz każdego klastra (WCSS).
+          </p>
+        </div>
+
+        <!-- Quick Metrics Ribbon -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6 pt-6 border-t border-slate-200/80">
+          <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Funkcja Kosztu</div>
+            <div class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">Min. WCSS (Inertia)</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">\(\sum_{j} \sum_{i} \|x_i - \mu_j\|^2\)</div>
+          </div>
+          <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Gwarancja Zbieżności</div>
+            <div class="text-base sm:text-lg font-bold text-emerald-600 mt-0.5">Minimum Lokalne</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">Monotoniczny spadek kosztu</div>
+          </div>
+          <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Złożoność Czasowa</div>
+            <div class="text-base sm:text-lg font-bold text-blue-600 mt-0.5">\(\mathcal{O}(I \cdot k \cdot N \cdot d)\)</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">Liniowa względem liczby danych</div>
+          </div>
+          <div class="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200">
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Inicjalizacja Standard</div>
+            <div class="text-base sm:text-lg font-bold text-amber-600 mt-0.5">k-means++</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">Probabilistyczny rozrzut \(D(x)^2\)</div>
+          </div>
+        </div>
+      </section>
+
 
     <!-- MODUŁ 1: Intuicja Geometryczna i Diagramy Woronoja -->
     <section id="module1" class="saas-card p-6 sm:p-8">
@@ -756,6 +799,7 @@ def vectorized_kmeans(X: np.ndarray, k: int, max_iter: int = 100, tol: float = 1
     </section>
 
   </main>
+  </div>
 
   <!-- Global Footer -->
   <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
