@@ -217,3 +217,28 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .converged-pulse {
   animation: pulse-soft 2s infinite ease-in-out;
 }
+
+/* Responsive & Mobile Protection */
+.katex-display {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-width: 100% !important;
+  padding: 0.5rem 0 !important;
+}
+
+.katex-mathml {
+  display: none !important;
+}
+
+pre, code {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+table {
+  max-width: 100% !important;
+}
+
+td, th {
+  position: relative !important;
+}

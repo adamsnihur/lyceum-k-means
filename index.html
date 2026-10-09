@@ -64,6 +64,7 @@
       <a href="#module4" class="hover:text-blue-600 transition-colors">4. Diagnostyka (Łokieć & Sylwetka)</a>
       <a href="#module5" class="hover:text-blue-600 transition-colors">5. Quiz Sprawdzający</a>
       <a href="#module6" class="hover:text-blue-600 transition-colors">6. Produkcyjny Python</a>
+      <a href="#module7" class="hover:text-blue-600 transition-colors">7. Źródła & Bibliografia</a>
     </nav>
   </header>
 
@@ -672,6 +673,85 @@ def vectorized_kmeans(X: np.ndarray, k: int, max_iter: int = 100, tol: float = 1
       </div>
       <div id="copyToast" class="hidden mt-3 p-2 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold rounded-lg text-center">
         ✓ Skopiowano kod Pythona do schowka!
+      </div>
+    </section>
+
+    <!-- MODUŁ 7: 📚 Źródła Pierwotne & Bibliografia Naukowa -->
+    <section id="module7" class="saas-card p-6 sm:p-8">
+      <div class="border-b border-slate-200 pb-4 mb-6">
+        <span class="badge-pill bg-blue-50 text-blue-700 border border-blue-200">Moduł 7 • Rygor Badawczy</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+          📚 Źródła Pierwotne & Bibliografia Naukowa
+        </h3>
+        <p class="text-xs text-slate-500 mt-1">
+          Wykaz literatury założycielskiej, twierdzeń optymalizacyjnych i metod inicjalizacji pozyskanych z otwartych baz naukowych (IEEE, SODA, ScienceDirect).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+          <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1">
+            <span>Algorytm Lloyda (1982 / 1957)</span>
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold">IEEE Trans. Inf. Theory</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">
+            Least Squares Quantization in PCM
+          </h4>
+          <p class="text-slate-600 mb-2">
+            Stuart P. Lloyd. <em>IEEE Transactions on Information Theory</em>, 28(2), 129-137 (1982). Artykuł źródłowy wprowadzający naprzemienną optymalizację przypisania do komórek Voronoi i wyznaczania środków ciężkości w modulacji impulsowo-kodowej PCM.
+          </p>
+          <a href="https://doi.org/10.1109/TIT.1982.1056489" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-600 font-semibold hover:underline">
+            <span>🔗 DOI: 10.1109/TIT.1982.1056489</span>
+          </a>
+        </div>
+
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+          <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1">
+            <span>Terminologia & Statystyka (1967)</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Berkeley Symp.</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">
+            Some Methods for Classification and Analysis of Multivariate Observations
+          </h4>
+          <p class="text-slate-600 mb-2">
+            James MacQueen. <em>Proceedings of the 5th Berkeley Symposium on Mathematical Statistics and Probability</em>, 1, 281-297 (1967). Wprowadzenie terminu "k-means" i dowód zbieżności wariantu online dla prób losowych w przestrzeni euklidesowej.
+          </p>
+          <a href="https://projecteuclid.org/euclid.bsmsp/1200512992" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-600 font-semibold hover:underline">
+            <span>🔗 Euclid: bsmsp/1200512992</span>
+          </a>
+        </div>
+
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+          <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1">
+            <span>Inicjalizacja Probabilistyczna (2007)</span>
+            <span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-semibold">ACM-SIAM SODA</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">
+            k-means++: The Advantages of Careful Seeding
+          </h4>
+          <p class="text-slate-600 mb-2">
+            David Arthur, Sergei Vassilvitskii. <em>Proceedings of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms</em>, 1027-1035 (2007). Przełomowa metoda losowania centroidów z prawdopodobieństwem proporcjonalnym do \(D(x)^2\), gwarantująca aproksymację \(O(\log k)\)-optymalną.
+          </p>
+          <a href="https://doi.org/10.5555/1283383.1283494" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-600 font-semibold hover:underline">
+            <span>🔗 ACM Digital Library: 1283494</span>
+          </a>
+        </div>
+
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+          <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1">
+            <span>Diagnostyka Jakości Skupień (1987)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold">ScienceDirect</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">
+            Silhouettes: A Graphical Aid to Interpretation and Validation
+          </h4>
+          <p class="text-slate-600 mb-2">
+            Peter J. Rousseeuw. <em>Journal of Computational and Applied Mathematics</em>, 20, 53-65 (1987). Wyprowadzenie wskaźnika sylwetki \(s(i) \in [-1, 1]\) mierzącego spójność i separację klastrów niezależnie od liczby skupień.
+          </p>
+          <a href="https://doi.org/10.1016/0377-0427(87)90125-7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-600 font-semibold hover:underline">
+            <span>🔗 DOI: 10.1016/0377-0427(87)90125-7</span>
+          </a>
+        </div>
       </div>
     </section>
 
